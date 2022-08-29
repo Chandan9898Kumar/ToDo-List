@@ -1,9 +1,12 @@
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
-const MyList = ["Hi"]
+const MyList = []
 const MyFunction = () => {
     const [inputValue, setInputValue] = useState('')
-    const [List, setList] = useState(MyList)
+    const [Lists, setLists] = useState(MyList)
+    const[NewList,setNewList]=useState('')
+    
+
 
     let navigate=useNavigate()
     const MyInputChange = (e) => {
@@ -15,18 +18,20 @@ const MyFunction = () => {
         if (inputValue === '') {
             return
         }
-        let concates=List.concat(inputValue)
-        setList(concates)
+        let concates=Lists.concat(inputValue)
+        setLists(concates)
         setInputValue('')
     }
 
 
     const RemoveValue = (e) => {
         e.preventDefault()
-        const Remove = List.pop()
-        setList(List)
-        
-
+        if(Lists.length===0){
+            return
+        }
+        const Remove = Lists.pop()
+        setNewList(Remove)
+    
     }
 
     return (
@@ -61,7 +66,7 @@ const MyFunction = () => {
             <br />
 
             <ul>
-                {List.map((el, index) => (
+            {Lists.map((el, index) => (
                     <li key={index}>
                         {el}
                     </li>
