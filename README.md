@@ -9,6 +9,6 @@ In the project directory, you can run:
 ### `npm start`
 
 Conclusion:
-User Can Add Items in list and Remove it with Button.
+User Can Add ,Edit Remove items from  list.
 
 
