@@ -11,7 +11,8 @@ const MyHome = () => {
             <NavLink to='/ClassCom'>Class Component</NavLink><br /><br />
             <NavLink to='/FunctionalTodo'>FunctionalTodo</NavLink><br /><br />
             <NavLink to='/MyClassToDo'>MyClassToDo</NavLink><br /><br />
-            <NavLink to='/MainComponent'>To Do with Functional</NavLink>
+            <NavLink to='/MainComponent'>ToDo with Functional</NavLink><br /><br />
+            <NavLink to='/MainClassComponent'>ToDo With Class</NavLink>
 
         </>
 
